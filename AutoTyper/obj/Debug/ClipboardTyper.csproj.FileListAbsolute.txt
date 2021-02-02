@@ -1,0 +1,9 @@
+D:\Projects\ClipboardTyper\ClipboardTyper\ClipboardTyper\obj\Debug\ClipboardTyper.csproj.GenerateResource.cache
+D:\Projects\ClipboardTyper\ClipboardTyper\ClipboardTyper\obj\Debug\ClipboardTyper.csproj.CoreCompileInputs.cache
+D:\Projects\ClipboardTyper\ClipboardTyper\ClipboardTyper\obj\Debug\AutoTyper.MainForm.resources
+D:\Projects\ClipboardTyper\ClipboardTyper\ClipboardTyper\obj\Debug\AutoTyper.Properties.Resources.resources
+D:\Projects\ClipboardTyper\ClipboardTyper\ClipboardTyper\bin\Debug\AutoTyper.exe.config
+D:\Projects\ClipboardTyper\ClipboardTyper\ClipboardTyper\bin\Debug\AutoTyper.exe
+D:\Projects\ClipboardTyper\ClipboardTyper\ClipboardTyper\bin\Debug\AutoTyper.pdb
+D:\Projects\ClipboardTyper\ClipboardTyper\ClipboardTyper\obj\Debug\AutoTyper.exe
+D:\Projects\ClipboardTyper\ClipboardTyper\ClipboardTyper\obj\Debug\AutoTyper.pdb
