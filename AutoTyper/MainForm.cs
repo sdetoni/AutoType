@@ -34,6 +34,8 @@ namespace AutoTyper
             // Update settings
             Properties.Settings.Default.AutoTypeDelay = DelayStartSecsNum.Value.ToString();
             Properties.Settings.Default.CharTypeDelay = DelayCharsSendNum.Value.ToString();
+            Properties.Settings.Default.TurboTypeChk = TurboTypeChk.Checked;
+
             Properties.Settings.Default.Save();
 
             base.OnFormClosing(e);
@@ -50,6 +52,7 @@ namespace AutoTyper
             // Load/set settings
             DelayStartSecsNum.Value = Int32.Parse(Properties.Settings.Default.AutoTypeDelay);
             DelayCharsSendNum.Value = Int32.Parse(Properties.Settings.Default.CharTypeDelay);
+            TurboTypeChk.Checked    = Properties.Settings.Default.TurboTypeChk;
             Visible                 = false;
             PlaceLowerRight(true);
         }
@@ -154,29 +157,55 @@ namespace AutoTyper
             }
 
             // (+), caret(^), percent sign(%), tilde(~), and parentheses() { }
-            Char[] specChar   = new Char[8] { '+', '^', '%', '~', '(', ')', '{', '}' };
-            String sendString = "";
-            for (int idx = 0; idx < specChar.Length; idx++)
+            Char[] specChar = new Char[8] { '{', '}', '+', '^', '%', '~', '(', ')'};
+
+            if (TurboTypeChk.Checked)
             {
-                if (mTextToSend[mTextToSendIdx - 1] == specChar[idx])
+                String newSendString = "";
+                for (int sci = 0; sci < mTextToSend.Length; sci++)
                 {
-                    sendString = "{" + mTextToSend[mTextToSendIdx - 1] + "}";
-                    break;
+                    bool matched = false;
+                    for (int idx = 0; idx < specChar.Length; idx++)
+                    {
+                        if  (mTextToSend[sci] == specChar[idx])
+                        {
+                            newSendString += "{" + mTextToSend[sci] + "}";
+                            matched = true;
+                            break;
+                        }
+                    }
+                    if (!matched)
+                        newSendString += mTextToSend[sci];
                 }
+
+                SendKeys.Send(newSendString);
+                mTextToSendIdx = mTextToSend.Length;
             }
-            if (sendString == "")
-                sendString = mTextToSend[mTextToSendIdx - 1].ToString();
-            
-            SendKeys.Send(sendString);
-
-            // Update the progress bar
-            ProgBar.Value = ProgBar.Value + 1;
-
-            // this hack makes it display quicker! So it show real representation of progress.
-            if (ProgBar.Value > 0)
+            else
             {
-                ProgBar.Value = ProgBar.Value - 1;
+                String sendString = "";
+                for (int idx = 0; idx < specChar.Length; idx++)
+                {
+                    if (mTextToSend[mTextToSendIdx - 1] == specChar[idx])
+                    {
+                        sendString = "{" + mTextToSend[mTextToSendIdx - 1] + "}";
+                        break;
+                    }
+                }
+                if (sendString == "")
+                    sendString = mTextToSend[mTextToSendIdx - 1].ToString();
+
+                SendKeys.Send(sendString);
+
+                // Update the progress bar
                 ProgBar.Value = ProgBar.Value + 1;
+
+                // this hack makes it display quicker! So it show real representation of progress.
+                if (ProgBar.Value > 0)
+                {
+                    ProgBar.Value = ProgBar.Value - 1;
+                    ProgBar.Value = ProgBar.Value + 1;
+                }
             }
         }
 
@@ -220,6 +249,18 @@ namespace AutoTyper
         private void AboutMenuItem_Click(object sender, EventArgs e)
         {
             IconTray.ShowBalloonTip(10000);
+        }
+
+        private void TurboTyperChkBox_Changed(object sender, EventArgs e)
+        {
+            if (TurboTypeChk.Checked)
+            {
+                DelayCharsSendNum.Enabled = false;
+            }
+            else
+            {
+                DelayCharsSendNum.Enabled = true;
+            }
         }
     }
 }

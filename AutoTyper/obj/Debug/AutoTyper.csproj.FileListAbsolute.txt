@@ -16,3 +16,4 @@ D:\Projects\VaultProjects\ClipboardAutoTyper\AutoTyper\obj\Debug\AutoTyper.cspro
 D:\Projects\VaultProjects\ClipboardAutoTyper\AutoTyper\obj\Debug\AutoTyper.csproj.CoreCompileInputs.cache
 D:\Projects\VaultProjects\ClipboardAutoTyper\AutoTyper\obj\Debug\AutoTyper.exe
 D:\Projects\VaultProjects\ClipboardAutoTyper\AutoTyper\obj\Debug\AutoTyper.pdb
+D:\Projects\VaultProjects\ClipboardAutoTyper\AutoTyper\obj\Debug\AutoTyper.csprojAssemblyReference.cache

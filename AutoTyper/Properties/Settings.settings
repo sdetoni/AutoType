@@ -1,5 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ClipboardTyper.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="AutoTyper.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
     <Setting Name="AutoTypeDelay" Type="System.String" Scope="User">
@@ -7,6 +7,9 @@
     </Setting>
     <Setting Name="CharTypeDelay" Type="System.String" Scope="User">
       <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="TurboTypeChk" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

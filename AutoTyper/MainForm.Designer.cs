@@ -46,6 +46,7 @@ namespace AutoTyper
             this.AboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ExitAppMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TurboTypeChk = new System.Windows.Forms.CheckBox();
             this.TopPos = new System.Windows.Forms.Label();
             this.AutoTypeClipboardBut = new System.Windows.Forms.Button();
             this.ProgBar = new System.Windows.Forms.ProgressBar();
@@ -108,7 +109,7 @@ namespace AutoTyper
             0,
             0});
             this.DelayCharsSendNum.Minimum = new decimal(new int[] {
-            20,
+            10,
             0,
             0,
             0});
@@ -116,7 +117,7 @@ namespace AutoTyper
             this.DelayCharsSendNum.Size = new System.Drawing.Size(120, 20);
             this.DelayCharsSendNum.TabIndex = 5;
             this.DelayCharsSendNum.Value = new decimal(new int[] {
-            50,
+            10,
             0,
             0,
             0});
@@ -137,6 +138,7 @@ namespace AutoTyper
             // TextBuffer
             // 
             this.TextBuffer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TextBuffer.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextBuffer.Location = new System.Drawing.Point(3, 103);
             this.TextBuffer.Multiline = true;
             this.TextBuffer.Name = "TextBuffer";
@@ -151,8 +153,8 @@ namespace AutoTyper
             // IconTray
             // 
             this.IconTray.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.IconTray.BalloonTipText = "Written by Steven De Toni 2020\r\nDouble Clip System Tray icon to auto type text fr" +
-    "om the clipboard into an input field.\r\n";
+            this.IconTray.BalloonTipText = "Written by Steven De Toni 2020\r\nDouble Click System Tray icon to auto type text f" +
+    "rom the Clipboard into an input field.\r\n";
             this.IconTray.BalloonTipTitle = "Auto Typer";
             this.IconTray.ContextMenuStrip = this.PopMenu;
             this.IconTray.Icon = ((System.Drawing.Icon)(resources.GetObject("IconTray.Icon")));
@@ -201,6 +203,7 @@ namespace AutoTyper
             // panel1
             // 
             this.panel1.AutoSize = true;
+            this.panel1.Controls.Add(this.TurboTypeChk);
             this.panel1.Controls.Add(this.TopPos);
             this.panel1.Controls.Add(this.AutoTypeClipboardBut);
             this.panel1.Controls.Add(this.ProgBar);
@@ -214,6 +217,17 @@ namespace AutoTyper
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(404, 94);
             this.panel1.TabIndex = 8;
+            // 
+            // TurboTypeChk
+            // 
+            this.TurboTypeChk.AutoSize = true;
+            this.TurboTypeChk.Location = new System.Drawing.Point(266, 70);
+            this.TurboTypeChk.Name = "TurboTypeChk";
+            this.TurboTypeChk.Size = new System.Drawing.Size(129, 17);
+            this.TurboTypeChk.TabIndex = 9;
+            this.TurboTypeChk.Text = "Enable TURBO mode";
+            this.TurboTypeChk.UseVisualStyleBackColor = true;
+            this.TurboTypeChk.CheckedChanged += new System.EventHandler(this.TurboTyperChkBox_Changed);
             // 
             // TopPos
             // 
@@ -316,6 +330,7 @@ namespace AutoTyper
         private System.Windows.Forms.Timer ProgTimer;
         private System.Windows.Forms.Label TopPos;
         private System.Windows.Forms.ToolStripMenuItem AboutMenuItem;
+        private System.Windows.Forms.CheckBox TurboTypeChk;
     }
 }
 

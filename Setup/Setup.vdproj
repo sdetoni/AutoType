@@ -165,6 +165,11 @@
             "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
+                    "_93AC6221914BD43310D56F14C843C56E"
+                    {
+                    "Name" = "8:System.Net.Http.dll"
+                    "Attributes" = "3:512"
+                    }
                 }
             "SourcePath" = "8:System.Net.Http.dll"
             "TargetName" = "8:"
@@ -262,15 +267,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:AutoTyper"
-        "ProductCode" = "8:{B17D04B5-A02F-43BE-A62F-E2C573C88830}"
-        "PackageCode" = "8:{25A7BD8E-1EFF-48EC-A37D-DD47F0C3163A}"
+        "ProductCode" = "8:{FB200863-E536-4355-9BDE-52F74F6D46F7}"
+        "PackageCode" = "8:{C8C49CF4-E9C8-4393-A8DD-BEB70A463C0E}"
         "UpgradeCode" = "8:{55ECAB77-98D9-4820-85D9-6F972D81C91A}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.1"
+        "ProductVersion" = "8:1.0.3"
         "Manufacturer" = "8:UoW"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

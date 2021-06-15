@@ -46,5 +46,17 @@ namespace AutoTyper.Properties {
                 this["CharTypeDelay"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool TurboTypeChk {
+            get {
+                return ((bool)(this["TurboTypeChk"]));
+            }
+            set {
+                this["TurboTypeChk"] = value;
+            }
+        }
     }
 }
