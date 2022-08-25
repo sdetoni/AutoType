@@ -19,6 +19,7 @@ namespace AutoTyper
                 components.Dispose();
             }
             base.Dispose(disposing);
+            this.cleanUp();
         }
 
         #region Windows Form Designer generated code
@@ -46,12 +47,15 @@ namespace AutoTyper
             this.AboutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ExitAppMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.AbortTyping = new System.Windows.Forms.Button();
+            this.ShortCutKeyboardChk = new System.Windows.Forms.CheckBox();
             this.TurboTypeChk = new System.Windows.Forms.CheckBox();
             this.TopPos = new System.Windows.Forms.Label();
             this.AutoTypeClipboardBut = new System.Windows.Forms.Button();
             this.ProgBar = new System.Windows.Forms.ProgressBar();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.ProgTimer = new System.Windows.Forms.Timer(this.components);
+            this.BootTimer = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.DelayStartSecsNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DelayCharsSendNum)).BeginInit();
             this.PopMenu.SuspendLayout();
@@ -139,11 +143,11 @@ namespace AutoTyper
             // 
             this.TextBuffer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TextBuffer.Font = new System.Drawing.Font("Consolas", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBuffer.Location = new System.Drawing.Point(3, 103);
+            this.TextBuffer.Location = new System.Drawing.Point(3, 128);
             this.TextBuffer.Multiline = true;
             this.TextBuffer.Name = "TextBuffer";
             this.TextBuffer.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.TextBuffer.Size = new System.Drawing.Size(404, 123);
+            this.TextBuffer.Size = new System.Drawing.Size(491, 275);
             this.TextBuffer.TabIndex = 6;
             // 
             // StartTimer
@@ -153,8 +157,6 @@ namespace AutoTyper
             // IconTray
             // 
             this.IconTray.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
-            this.IconTray.BalloonTipText = "Written by Steven De Toni 2020\r\nDouble Click System Tray icon to auto type text f" +
-    "rom the Clipboard into an input field.\r\n";
             this.IconTray.BalloonTipTitle = "Auto Typer";
             this.IconTray.ContextMenuStrip = this.PopMenu;
             this.IconTray.Icon = ((System.Drawing.Icon)(resources.GetObject("IconTray.Icon")));
@@ -203,6 +205,8 @@ namespace AutoTyper
             // panel1
             // 
             this.panel1.AutoSize = true;
+            this.panel1.Controls.Add(this.AbortTyping);
+            this.panel1.Controls.Add(this.ShortCutKeyboardChk);
             this.panel1.Controls.Add(this.TurboTypeChk);
             this.panel1.Controls.Add(this.TopPos);
             this.panel1.Controls.Add(this.AutoTypeClipboardBut);
@@ -215,13 +219,34 @@ namespace AutoTyper
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(404, 94);
+            this.panel1.Size = new System.Drawing.Size(491, 119);
             this.panel1.TabIndex = 8;
+            // 
+            // AbortTyping
+            // 
+            this.AbortTyping.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AbortTyping.Location = new System.Drawing.Point(1, 0);
+            this.AbortTyping.Name = "AbortTyping";
+            this.AbortTyping.Size = new System.Drawing.Size(53, 19);
+            this.AbortTyping.TabIndex = 11;
+            this.AbortTyping.Text = "Abort";
+            this.AbortTyping.UseVisualStyleBackColor = true;
+            this.AbortTyping.Click += new System.EventHandler(this.AbortTyping_Click);
+            // 
+            // ShortCutKeyboardChk
+            // 
+            this.ShortCutKeyboardChk.AutoSize = true;
+            this.ShortCutKeyboardChk.Location = new System.Drawing.Point(6, 100);
+            this.ShortCutKeyboardChk.Name = "ShortCutKeyboardChk";
+            this.ShortCutKeyboardChk.Size = new System.Drawing.Size(231, 17);
+            this.ShortCutKeyboardChk.TabIndex = 10;
+            this.ShortCutKeyboardChk.Text = "Enable \'Contol + Alt + v\'  KB Shortcut Paste";
+            this.ShortCutKeyboardChk.UseVisualStyleBackColor = true;
             // 
             // TurboTypeChk
             // 
             this.TurboTypeChk.AutoSize = true;
-            this.TurboTypeChk.Location = new System.Drawing.Point(266, 70);
+            this.TurboTypeChk.Location = new System.Drawing.Point(267, 69);
             this.TurboTypeChk.Name = "TurboTypeChk";
             this.TurboTypeChk.Size = new System.Drawing.Size(129, 17);
             this.TurboTypeChk.TabIndex = 9;
@@ -253,10 +278,10 @@ namespace AutoTyper
             // 
             this.ProgBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ProgBar.Location = new System.Drawing.Point(1, 0);
+            this.ProgBar.Location = new System.Drawing.Point(56, 0);
             this.ProgBar.MarqueeAnimationSpeed = 16;
             this.ProgBar.Name = "ProgBar";
-            this.ProgBar.Size = new System.Drawing.Size(403, 19);
+            this.ProgBar.Size = new System.Drawing.Size(435, 19);
             this.ProgBar.Step = 1;
             this.ProgBar.TabIndex = 6;
             // 
@@ -270,9 +295,9 @@ namespace AutoTyper
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 125F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(410, 229);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(497, 406);
             this.tableLayoutPanel1.TabIndex = 9;
             // 
             // ProgTimer
@@ -280,13 +305,19 @@ namespace AutoTyper
             this.ProgTimer.Interval = 200;
             this.ProgTimer.Tick += new System.EventHandler(this.ProgTimer_Tick);
             // 
+            // BootTimer
+            // 
+            this.BootTimer.Tick += new System.EventHandler(this.BootTimer_Tick);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(410, 229);
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
+            this.ClientSize = new System.Drawing.Size(497, 406);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -331,6 +362,9 @@ namespace AutoTyper
         private System.Windows.Forms.Label TopPos;
         private System.Windows.Forms.ToolStripMenuItem AboutMenuItem;
         private System.Windows.Forms.CheckBox TurboTypeChk;
+        private System.Windows.Forms.CheckBox ShortCutKeyboardChk;
+        private System.Windows.Forms.Timer BootTimer;
+        private System.Windows.Forms.Button AbortTyping;
     }
 }
 

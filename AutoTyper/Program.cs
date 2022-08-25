@@ -13,6 +13,7 @@ namespace AutoTyper
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
+
         static void Main(string[] args)
         {
             if (args.Length == 1 && args[0] == "INSTALLER") 
@@ -23,9 +24,8 @@ namespace AutoTyper
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
-
-
+            MainForm mf = new MainForm();
+            Application.Run(mf);
         }
     }
 }

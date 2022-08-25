@@ -15,14 +15,14 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_65823F009209487A99F4F01C60800DF8"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_0B02E205159B67E0BDE87EA1ABC5E9B5"
+        "OwnerKey" = "8:_DE29CF9CA0FD40C9B69963E43A826B31"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_93AC6221914BD43310D56F14C843C56E"
-        "OwnerKey" = "8:_DE29CF9CA0FD40C9B69963E43A826B31"
+        "MsmKey" = "8:_65823F009209487A99F4F01C60800DF8"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -40,7 +40,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_93AC6221914BD43310D56F14C843C56E"
+        "OwnerKey" = "8:_0B02E205159B67E0BDE87EA1ABC5E9B5"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -130,7 +130,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:.NETFramework,Version=v4.6.1"
+                "FrameworkVersion" = "8:v4.6.1 "
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=671728"
                 }
@@ -138,34 +138,14 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_65823F009209487A99F4F01C60800DF8"
-            {
-            "SourcePath" = "8:..\\AutoTyper\\Icon1.ico"
-            "TargetName" = "8:Icon1.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_BE7F27D0704D4CE98591CDA3595E6681"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_93AC6221914BD43310D56F14C843C56E"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0B02E205159B67E0BDE87EA1ABC5E9B5"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
+            "AssemblyAsmDisplayName" = "8:System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_93AC6221914BD43310D56F14C843C56E"
+                    "_0B02E205159B67E0BDE87EA1ABC5E9B5"
                     {
                     "Name" = "8:System.Net.Http.dll"
                     "Attributes" = "3:512"
@@ -187,6 +167,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_65823F009209487A99F4F01C60800DF8"
+            {
+            "SourcePath" = "8:..\\AutoTyper\\Icon1.ico"
+            "TargetName" = "8:Icon1.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_BE7F27D0704D4CE98591CDA3595E6681"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -267,15 +267,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:AutoTyper"
-        "ProductCode" = "8:{FB200863-E536-4355-9BDE-52F74F6D46F7}"
-        "PackageCode" = "8:{C8C49CF4-E9C8-4393-A8DD-BEB70A463C0E}"
+        "ProductCode" = "8:{E06AD68F-7800-4004-BE06-F98FFF5448B6}"
+        "PackageCode" = "8:{F9C6D910-9C47-43E7-954A-88E7A6573165}"
         "UpgradeCode" = "8:{55ECAB77-98D9-4820-85D9-6F972D81C91A}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.3"
+        "ProductVersion" = "8:1.8"
         "Manufacturer" = "8:UoW"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

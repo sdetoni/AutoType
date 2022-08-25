@@ -26,3 +26,5 @@ D:\Projects\VaultProjects\ClipboardAutoTyper\AutoTyper\obj\Release\AutoTyper.csp
 D:\Projects\VaultProjects\ClipboardAutoTyper\AutoTyper\obj\Release\AutoTyper.csproj.CoreCompileInputs.cache
 D:\Projects\VaultProjects\ClipboardAutoTyper\AutoTyper\obj\Release\AutoTyper.exe
 D:\Projects\VaultProjects\ClipboardAutoTyper\AutoTyper\obj\Release\AutoTyper.pdb
+D:\Projects\VaultProjects\ClipboardAutoTyper\AutoTyper\obj\Release\AutoTyper.csproj.AssemblyReference.cache
+D:\Projects\VaultProjects\ClipboardAutoTyper\AutoTyper\obj\Release\AutoTyper.csproj.SuggestedBindingRedirects.cache
