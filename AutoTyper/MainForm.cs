@@ -15,7 +15,7 @@ namespace AutoTyper
         [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.Winapi)] [return: MarshalAs(UnmanagedType.Bool)] static extern bool EnableWindow(IntPtr hWnd, bool bEnable);
         [DllImport("user32.dll", CharSet = CharSet.Auto, CallingConvention = CallingConvention.Winapi)] internal static extern IntPtr GetForegroundWindow();
 
-        const String  mVersion              = "1.8";
+        const String  mVersion              = "1.9";
         const String  mTitle                = "Auto Typer";
         Boolean mStartTextSend              = false;
         String  mTextToSend                 = "";
@@ -263,8 +263,9 @@ namespace AutoTyper
             }
 
             // (+), caret(^), percent sign(%), tilde(~), and parentheses() { }
-            Char[] specChar = new Char[9]       { '{',    '}',   '+',   '^',   '%',   '~',   '(',   ')',    '\n'};
-            string[] transChars = new string[9] { "{{}", "{}}", "{+}", "{^}", "{%}", "{~}", "{(}", "{)}", "{ENTER}" };
+            Char[]   specChar   = new Char[9]   { '{',     '}',    '+',   '^',   '%',   '~',   '(',   ')',    '\n'};
+            string[] transChars = new string[9] { "{{}", "{}}", "+{+}", "{^}", "{%}", "{~}", "{(}", "{)}", "{ENTER}" };
+
 
             if (TurboTypeChk.Checked)
             {

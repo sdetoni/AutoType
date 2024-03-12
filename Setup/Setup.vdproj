@@ -130,7 +130,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:v4.6.1 "
+                "FrameworkVersion" = "8:v4.6.1  "
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=671728"
                 }
@@ -267,15 +267,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:AutoTyper"
-        "ProductCode" = "8:{E06AD68F-7800-4004-BE06-F98FFF5448B6}"
-        "PackageCode" = "8:{F9C6D910-9C47-43E7-954A-88E7A6573165}"
+        "ProductCode" = "8:{0339DF18-4C71-4A38-B3A8-A16114120D6C}"
+        "PackageCode" = "8:{06549537-E30F-4919-B123-371B021D9256}"
         "UpgradeCode" = "8:{55ECAB77-98D9-4820-85D9-6F972D81C91A}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.8"
+        "ProductVersion" = "8:1.9"
         "Manufacturer" = "8:UoW"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

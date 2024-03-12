@@ -18,3 +18,13 @@ D:\Projects\VaultProjects\ClipboardAutoTyper\AutoTyper\obj\Debug\AutoTyper.exe
 D:\Projects\VaultProjects\ClipboardAutoTyper\AutoTyper\obj\Debug\AutoTyper.pdb
 D:\Projects\VaultProjects\ClipboardAutoTyper\AutoTyper\obj\Debug\AutoTyper.csproj.AssemblyReference.cache
 D:\Projects\VaultProjects\ClipboardAutoTyper\AutoTyper\obj\Debug\AutoTyper.csproj.SuggestedBindingRedirects.cache
+D:\Projects\github.com\AutoType\AutoTyper\bin\Debug\AutoTyper.exe.config
+D:\Projects\github.com\AutoType\AutoTyper\bin\Debug\AutoTyper.exe
+D:\Projects\github.com\AutoType\AutoTyper\bin\Debug\AutoTyper.pdb
+D:\Projects\github.com\AutoType\AutoTyper\obj\Debug\AutoTyper.csproj.AssemblyReference.cache
+D:\Projects\github.com\AutoType\AutoTyper\obj\Debug\AutoTyper.MainForm.resources
+D:\Projects\github.com\AutoType\AutoTyper\obj\Debug\AutoTyper.Properties.Resources.resources
+D:\Projects\github.com\AutoType\AutoTyper\obj\Debug\AutoTyper.csproj.GenerateResource.cache
+D:\Projects\github.com\AutoType\AutoTyper\obj\Debug\AutoTyper.csproj.CoreCompileInputs.cache
+D:\Projects\github.com\AutoType\AutoTyper\obj\Debug\AutoTyper.exe
+D:\Projects\github.com\AutoType\AutoTyper\obj\Debug\AutoTyper.pdb
